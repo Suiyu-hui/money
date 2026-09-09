@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>💰 记账本</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        .welcome-box {
+            text-align: center;
+            pointer-events: none;
+        }
+        .emoji {
+            font-size: 120px;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .slogan {
+            font-size: 28px;
+            color: #2e7d32;
+            font-weight: 300;
+            letter-spacing: 6px;
+        }
+        .hint {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #66bb6a;
+            letter-spacing: 2px;
+            animation: blink 1.8s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+    </style>
+</head>
+<body onclick="window.location.href='home.html'">
+
+<div class="welcome-box">
+    <span class="emoji">🐸</span>
+    <div class="slogan">钱就是用来花的 🌿</div>
+    <div class="hint">✦ 点任意处进入 ✦</div>
+</div>
+
+</body>
+</html>
