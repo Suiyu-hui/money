@@ -186,7 +186,13 @@
 
     function loadData() {
         const saved = localStorage.getItem(STORAGE_KEY);
-        if (saved) records = JSON.parse(saved);
+        if (saved) {
+            records = JSON.parse(saved);
+            records.forEach(function(r) {
+                if (r.category === '饭卡钱') r.category = '吃饭';
+                if (r.category === '游玩') r.category = '出行';
+            });
+        }
     }
 
     function changeMonth(delta) {

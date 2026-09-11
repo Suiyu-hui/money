@@ -363,10 +363,14 @@
         const savedRecords = localStorage.getItem(STORAGE_KEY);
         if (savedRecords) {
             records = JSON.parse(savedRecords);
+            var changed = false;
             records.forEach(function(r) {
-                if (r.category === '饭卡钱') r.category = '吃饭';
-                if (r.category === '游玩') r.category = '出行';
+                if (r.category === '饭卡钱') { r.category = '吃饭'; changed = true; }
+                if (r.category === '游玩') { r.category = '出行'; changed = true; }
             });
+            if (changed) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
+            }
         }
         const savedBalance = localStorage.getItem(BALANCE_KEY);
         if (savedBalance) {
